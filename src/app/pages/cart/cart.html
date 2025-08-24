@@ -1,0 +1,38 @@
+<div class="cart">
+  <h2>Cart</h2>
+
+  @if(cartService.items() && cartService.items().length > 0){
+
+    <div class="total-cart">
+      <p>Number of items: <strong>{{ cartService.totalItems()}}</strong></p>
+      <p>Total price: <strong>{{ cartService.totalPrice() | currency }}</strong></p>
+    </div>
+
+  <div class="cart-items">
+    @for(item of cartService.items(); track item.itemId){
+
+    <div class="cart-product">
+      <div class="cart-content">
+        <div class="cart-info">
+          <p>Product: {{ item.title }}</p>
+          <p>Price: {{ item.price }}</p>
+        </div>
+        <div class="cart-image">
+          <img [src]="item.productImage" alt="Product Image" />
+        </div>
+      </div>
+      <div class="cart-actions">
+        <button matButton="elevated" (click)="removeItem(item.itemId)">
+          Remove Item
+        </button>
+      </div>
+    </div>
+
+    }
+  </div>
+  } @else {
+  <div class="empty-cart">
+    <p>Your cart is empty</p>
+  </div>
+  }
+</div>

@@ -1,0 +1,13 @@
+
+
+<h2>Products</h2>
+
+<app-category-list/>
+
+@if(productsService.filteredProducts(); as products) {
+<div class="product-list">
+  @for(product of products; track product.id) {
+  <app-product-card [product]="product" />
+  }
+</div>
+}

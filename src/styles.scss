@@ -1,0 +1,81 @@
+
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+body {
+
+  color-scheme: light;
+
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+:root {
+  @include mat.snack-bar-overrides(
+    (
+      button-color: #fff,
+    )
+  );
+}
+
+.snackbar-success {
+  @include mat.snack-bar-overrides(
+    (
+      container-color: #4caf50,
+    )
+  );
+}
+
+.snackbar-error {
+  @include mat.snack-bar-overrides(
+    (
+      container-color: #f44336,
+    )
+  );
+}
+
+.snackbar-info {
+  @include mat.snack-bar-overrides(
+    (
+      container-color: #2196f3,
+    )
+  );
+}
+
+.snackbar-warning {
+  @include mat.snack-bar-overrides(
+    (
+      container-color: #ff9800,
+    )
+  );
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}

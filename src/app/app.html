@@ -1,0 +1,5 @@
+
+<app-navbar [isUserLoggedIn]="isUserLoggedIn()" [isUserAdmin]="isUserAdmin(user())" [user]="user()" (logout)="onLogout()"/>
+
+
+<div class="main"><router-outlet/></div>

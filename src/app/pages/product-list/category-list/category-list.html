@@ -1,0 +1,12 @@
+@if(categories() && categories().length > 0) {
+<ul>
+  <button matButton (click)="onClearCategories()">All</button>
+  @for(category of categories(); track category){
+
+  <button matButton (click)="onSelect(category)">
+    {{ category | capitalize }}
+  </button>
+
+  }
+</ul>
+}

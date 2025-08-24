@@ -1,0 +1,16 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 64px;
+  background-color: #d7e3ff;
+  color: #00458f;
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+}

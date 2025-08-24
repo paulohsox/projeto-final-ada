@@ -1,0 +1,20 @@
+<a matButton="elevated" routerLink="/home">Back to Products</a>
+
+<mat-card class="card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>{{product()?.title}}</mat-card-title>
+    <mat-card-subtitle>{{product()?.category}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-image [src]="product()?.image" alt="Product Image" />
+    <p>{{product()?.description}}</p>
+    <p><strong>{{product()?.price | currency }}</strong></p>
+    <p>Number of ratings: {{product()?.rating?.count}}</p>
+    <p>Average rating: {{product()?.rating?.rate}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button matButton="filled" (click)="addToCart(product()!)">
+      Add to Cart
+    </button>
+  </mat-card-actions>
+</mat-card>
