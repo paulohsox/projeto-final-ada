@@ -156,9 +156,10 @@ protected fb = inject(FormBuilder);
       data: { productId },
     });
 
-    this.dialogRef.afterClosed().subscribe((result?: number) => {
-      if (result != null) {
-        this.onDeleteProduct(result);
+    this.dialogRef.afterClosed().subscribe((confirmed: boolean) => {
+      if (confirmed) {
+        console.log(confirmed)
+        this.onDeleteProduct(productId);
       }
     });
   }
