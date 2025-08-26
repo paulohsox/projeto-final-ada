@@ -1,6 +1,6 @@
 # 🛍️ Projeto final Ada - Turma 1391 - Vitrine e-commerce
 
-- ✅ Todas os requisitos do projeto foram implementados conforme documento disponibilizado em **14/08/2025**
+- ✅ Todos os requisitos do projeto foram implementados conforme documento disponibilizado em **14/08/2025**
 
 - 👤 Conforme instruções da aula, foi deixado como **"administrador"** o usuário **"johnd"**  
   *(informações de login disponíveis no console.log na abertura da aplicação)*
