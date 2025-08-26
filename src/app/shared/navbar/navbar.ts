@@ -30,7 +30,7 @@ export class Navbar {
   @Output() logout = new EventEmitter();
 
   constructor(){
-    this.translateService.setDefaultLang('pt');
-    this.translateService.use('pt');
+    this.translateService.setDefaultLang('en');
+    this.translateService.use('en');
   }
 }
