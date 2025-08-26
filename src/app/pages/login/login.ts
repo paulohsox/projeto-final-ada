@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatButton } from '@angular/material/button';
 import { AuthService } from '../../core/services/auth.service';
+import { SnackbarService } from '../../core/services/snackbar.service';
 
 @Component({
   selector: 'app-login',
@@ -28,6 +29,7 @@ export class Login {
   private readonly fb = inject(FormBuilder);
   private readonly router = inject(Router);
   private readonly authService = inject(AuthService);
+  private readonly snackBar = inject(SnackbarService);
 
   protected loginForm: FormGroup;
 
@@ -52,7 +54,12 @@ export class Login {
     this.authService.login(this.username.value, this.password.value).subscribe({
       next: (_) => {
         this.router.navigate(['/home']);
+        this.snackBar.show('Successfully logged in!', 'success');
       },
+      error:(error) => {
+        this.snackBar.show('Something went wrong. Please, try again.', 'error');
+        console.error(error.message);
+      }
     });
   }
 }
