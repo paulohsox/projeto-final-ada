@@ -1,9 +1,9 @@
 <div class="navbar">
   <a class="title" matButton routerLink="/">{{ 'nav.brand' | translate }}</a>
-  <a matButton routerLink="/home">{{ 'nav.home' | translate }}</a>
+  <a matButton routerLink="/home" routerLinkActive="selected">{{ 'nav.home' | translate }}</a>
 
   @if(isUserLoggedIn && isUserAdmin){
-  <a matButton routerLink="/admin">{{ 'nav.admin' | translate }}</a>
+  <a matButton routerLink="/admin" routerLinkActive="selected">{{ 'nav.admin' | translate }}</a>
   }
 
   <div class="spacer"></div>
@@ -12,13 +12,13 @@
 
   <p>{{ 'nav.loggedInAs' |translate }} <strong>{{ user }}</strong></p>
   <div class="spacer"></div>
-  <a matButton routerLink="/cart">{{ 'nav.cart' | translate }}</a>
+  <a matButton routerLink="/cart" routerLinkActive="selected">{{ 'nav.cart' | translate }}</a>
   <button (click)="logout.emit()" matButton>
     {{ 'nav.logout' | translate }}
   </button>
 
   } @else {
-  <a matButton routerLink="/login">{{ 'nav.login' | translate }}</a>
+  <a matButton routerLink="/login" routerLinkActive="selected">{{ 'nav.login' | translate }}</a>
   }
 
   <app-language-switcher />

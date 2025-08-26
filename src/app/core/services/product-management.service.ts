@@ -24,7 +24,7 @@ export class ProductManagementService {
     productId: number,
     productInfo: Partial<Product>
   ): Observable<Product> {
-    return this.httpClient.patch<Product>(
+    return this.httpClient.put<Product>(
       `${this.baseUrl}/products/${productId}`,
       productInfo
     );

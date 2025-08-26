@@ -3,7 +3,10 @@ import { inject } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
-  const isProtected = req.url.includes('/cart') || req.url.includes('/admin');
+  const isProtected =
+    req.url.includes('/cart') ||
+    req.url.includes('/admin') ||
+    req.url.includes('/products');
 
   if (!isProtected) {
     return next(req);

@@ -1,9 +1,20 @@
 @if(categories() && categories().length > 0) {
 <ul>
-  <button matButton (click)="onClearCategories()">All</button>
-  @for(category of categories(); track category){
+  <button
+    matButton
+    (click)="onClearCategories()"
+    [class.selected]="lastClickedButton() === 5"
+  >
+    All
+  </button>
+  @for(category of categories(); track category; let i = $index){
 
-  <button matButton (click)="onSelect(category)">
+  <button
+    matButton
+    (click)="onSelect(category)"
+    (click)="onChangeClickedButton(i)"
+    [class.selected]="lastClickedButton() === i"
+  >
     {{ category | capitalize }}
   </button>
 
