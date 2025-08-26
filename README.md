@@ -1,39 +1,25 @@
-# Projeto Final Ada – Turma 1391  
-## Vitrine e-commerce  
+# 🛍️ Projeto final Ada - Turma 1391 - Vitrine e-commerce
 
-### 📌 Requisitos
-- Todos os requisitos do projeto foram implementados conforme o documento disponibilizado em **14/08/2025**.  
+- ✅ Todas os requisitos do projeto foram implementados conforme documento disponibilizado em **14/08/2025**
 
-### 👤 Usuário Administrador
-- Conforme instruções da aula, foi definido como **administrador** o usuário **`johnd`**.  
-- As informações de login estão disponíveis no **console.log** ao iniciar a aplicação.  
+- 👤 Conforme instruções da aula, foi deixado como **"administrador"** o usuário **"johnd"**  
+  *(informações de login disponíveis no console.log na abertura da aplicação)*
 
-### ⚙️ Implementação Técnica
-- **Categorização de Produtos**  
-  - Feita com **signals**, sem necessidade de chamadas adicionais à API.  
-  - Este recurso não era requisito, mas foi implementado para otimizar a aplicação.  
+- 🪄 A categorização dos produtos em tela é feita com **signals**, sem necessidade de efetuar uma chamada adicional à API *(não era requisito)*.
 
-- **Cart Service**  
-  - Implementado apenas com **signals**, sem chamadas à API.  
-  - Já a **autenticação** e os **produtos** possuem chamadas reais à API.  
-  - Esta decisão foi tomada porque:  
-    - Não havia especificação no documento de requisitos.  
-    - Os exemplos de aula foram feitos desta forma.  
+- 🛒 O **cart-service** foi implementado somente com **signals**, sem chamadas à API  
+  (ao contrário da autenticação e dos produtos, para os quais há chamadas feitas para a API).  
+  O motivo é que não havia esta especificação no projeto (os três requisitos que havia quando a este service foram implementados) e os exemplos de aula foram feitos desta forma.
 
-- **Comunicação entre Componentes**  
-  - Foi utilizado **`@Input`** e **`@Output`** apenas no componente **Navbar**, conforme exigido.  
-  - No restante da aplicação, os componentes foram mantidos **desacoplados**, com a lógica concentrada em **services**.  
+- 🔄 Foi usado **@Input** e **@Output** somente no componente **Navbar** *(já que havia este requisito)*;  
+  no restante do projeto, procurei deixar componentes **desacoplados**, concentrando a lógica nos **services**.
 
-- **Interceptor HTTP**  
-  - Implementado para anexar o header de autenticação às seguintes rotas:  
-    - **`/cart`** (não existente na API)  
-    - **`/admin`** (não existente na API)  
-    - **`/products`** (rota real da API)  
-  - Como a API não possui rotas protegidas, as rotas inexistentes foram incluídas apenas para simulação de cenários de autenticação.  
+- 🛡️ O **interceptor** foi implementado de forma a ser anexado às rotas **"/cart"** e **"/admin"** (ambas inexistentes) e **"/products"** (real) da API.  
+  Como a API não tem "rotas protegidas" por definição, coloquei duas rotas que existiriam em uma API real e uma rota real que, teoricamente, não precisaria do header de autenticação, para verificação da implementação.
 
-### 🚀 Deploy
-- O projeto está disponível em:  
-  👉 [https://projeto-final-ada.onrender.com/](https://projeto-final-ada.onrender.com/)  
+- 🌐 Foi feito **deploy** do projeto no endereço:  
+  👉 [https://projeto-final-ada.onrender.com/](https://projeto-final-ada.onrender.com/)
+
 
 
 
