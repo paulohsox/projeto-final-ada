@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "brand": "Vitrine e-commerce",
+    "home": "Home",
+    "admin": "Admin",
+    "cart": "Cart",
+    "login": "Login",
+    "logout": "Logout",
+    "loggedInAs": "Logged in as "
+  }
+}

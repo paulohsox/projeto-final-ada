@@ -1,8 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterLink } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { LanguageSwitcher } from "../language-switcher/language-switcher";
 
 @Component({
   selector: 'app-navbar',
@@ -10,15 +12,25 @@ import { RouterLink } from '@angular/router';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    RouterLink
-  ],
+    RouterLink,
+    TranslateModule,
+    LanguageSwitcher
+],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
 export class Navbar {
+
+  private readonly translateService = inject(TranslateService);
+
   @Input({ required: true }) isUserLoggedIn!: string | boolean;
   @Input({ required: true }) isUserAdmin!: boolean;
   @Input({ required: true }) user!: any;
 
   @Output() logout = new EventEmitter();
+
+  constructor(){
+    this.translateService.setDefaultLang('pt');
+    this.translateService.use('pt');
+  }
 }
