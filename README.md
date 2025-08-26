@@ -15,7 +15,7 @@
   no restante do projeto, procurei deixar componentes **desacoplados**, concentrando a lógica nos **services**.
 
 - 🛡️ O **interceptor** foi implementado de forma a ser anexado às rotas **"/cart"** e **"/admin"** (ambas inexistentes) e **"/products"** (real) da API.  
-  Como a API não tem "rotas protegidas" por definição, coloquei duas rotas que existiriam em uma API real e uma rota real que, teoricamente, não precisaria do header de autenticação, para verificação da implementação.
+  Como a API não tem "rotas protegidas" por definição, coloquei duas rotas que existiriam em uma API real e uma rota real que, teoricamente, não precisaria do header de autorização, para verificação da implementação.
 
 - 🌐 Foi feito **deploy** do projeto no endereço:  
   👉 [https://projeto-final-ada.onrender.com/](https://projeto-final-ada.onrender.com/)
