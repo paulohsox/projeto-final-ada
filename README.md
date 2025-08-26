@@ -1,3 +1,43 @@
+# Projeto Final Ada – Turma 1391  
+## Vitrine e-commerce  
+
+### 📌 Requisitos
+- Todos os requisitos do projeto foram implementados conforme o documento disponibilizado em **14/08/2025**.  
+
+### 👤 Usuário Administrador
+- Conforme instruções da aula, foi definido como **administrador** o usuário **`johnd`**.  
+- As informações de login estão disponíveis no **console.log** ao iniciar a aplicação.  
+
+### ⚙️ Implementação Técnica
+- **Categorização de Produtos**  
+  - Feita com **signals**, sem necessidade de chamadas adicionais à API.  
+  - Este recurso não era requisito, mas foi implementado para otimizar a aplicação.  
+
+- **Cart Service**  
+  - Implementado apenas com **signals**, sem chamadas à API.  
+  - Já a **autenticação** e os **produtos** possuem chamadas reais à API.  
+  - Esta decisão foi tomada porque:  
+    - Não havia especificação no documento de requisitos.  
+    - Os exemplos de aula foram feitos desta forma.  
+
+- **Comunicação entre Componentes**  
+  - Foi utilizado **`@Input`** e **`@Output`** apenas no componente **Navbar**, conforme exigido.  
+  - No restante da aplicação, os componentes foram mantidos **desacoplados**, com a lógica concentrada em **services**.  
+
+- **Interceptor HTTP**  
+  - Implementado para anexar o header de autenticação às seguintes rotas:  
+    - **`/cart`** (não existente na API)  
+    - **`/admin`** (não existente na API)  
+    - **`/products`** (rota real da API)  
+  - Como a API não possui rotas protegidas, as rotas inexistentes foram incluídas apenas para simulação de cenários de autenticação.  
+
+### 🚀 Deploy
+- O projeto está disponível em:  
+  👉 [https://projeto-final-ada.onrender.com/](https://projeto-final-ada.onrender.com/)  
+
+
+
+
 # VitrineProjetoFinal
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.0.
