@@ -9,7 +9,7 @@
 
 - 🛒 O **cart-service** foi implementado somente com **signals**, sem chamadas à API  
   (ao contrário da autenticação e dos produtos, para os quais há chamadas feitas para a API).  
-  O motivo é que não havia esta especificação no projeto (os três requisitos que havia quando a este service foram implementados) e os exemplos de aula foram feitos desta forma.
+  O motivo é que não havia esta especificação no projeto (os três requisitos que havia quanto a este service foram implementados) e os exemplos de aula foram feitos desta forma.
 
 - 🔄 Foi usado **@Input** e **@Output** somente no componente **Navbar** *(já que havia este requisito)*;  
   no restante do projeto, procurei deixar componentes **desacoplados**, concentrando a lógica nos **services**.
