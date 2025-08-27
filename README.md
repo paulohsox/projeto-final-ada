@@ -9,13 +9,13 @@
 
 - 🛒 O **cart-service** foi implementado somente com **signals**, sem chamadas à API  
   (ao contrário da autenticação e dos produtos, para os quais há chamadas feitas para a API).  
-  O motivo é que não havia esta especificação no projeto (os três requisitos que havia quando a este service foram implementados) e os exemplos de aula foram feitos desta forma.
+  O motivo é que não havia esta especificação no projeto (os três requisitos que havia quanto a este service foram implementados) e os exemplos de aula foram feitos desta forma.
 
 - 🔄 Foi usado **@Input** e **@Output** somente no componente **Navbar** *(já que havia este requisito)*;  
   no restante do projeto, procurei deixar componentes **desacoplados**, concentrando a lógica nos **services**.
 
 - 🛡️ O **interceptor** foi implementado de forma a ser anexado às rotas **"/cart"** e **"/admin"** (ambas inexistentes) e **"/products"** (real) da API.  
-  Como a API não tem "rotas protegidas" por definição, coloquei duas rotas que existiriam em uma API real e uma rota real que, teoricamente, não precisaria do header de autenticação, para verificação da implementação.
+  Como a API não tem "rotas protegidas" por definição, coloquei duas rotas que existiriam em uma API real e uma rota real que, teoricamente, não precisaria do header de autorização, para verificação da implementação.
 
 - 🌐 Foi feito **deploy** do projeto no endereço:  
   👉 [https://projeto-final-ada.onrender.com/](https://projeto-final-ada.onrender.com/)
