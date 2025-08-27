@@ -158,7 +158,6 @@ protected fb = inject(FormBuilder);
 
     this.dialogRef.afterClosed().subscribe((confirmed: boolean) => {
       if (confirmed) {
-        console.log(confirmed)
         this.onDeleteProduct(productId);
       }
     });

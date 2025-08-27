@@ -26,6 +26,5 @@ export class CategoryList {
 
   onChangeClickedButton(index: number) {
     this.lastClickedButton.set(index);
-    console.log(this.lastClickedButton());
   }
 }
